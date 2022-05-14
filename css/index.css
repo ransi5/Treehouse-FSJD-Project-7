@@ -93,97 +93,6 @@ input {
   width: 100%;
 }
 
-.placeholder {
-  width: 100px;
-  height: 100px;
-  background:
-    linear-gradient(white, white) padding-box,
-    linear-gradient(to right, steelblue, transparent) border-box;
-  margin: 160px auto;
-  border-radius: 50%;
-  border: 8px solid transparent;
-  animation: rotate 2s infinite;
-}
-
-.stats-search {
-  width: 100px;
-  padding:5px;
-  border: none;
-  outline: none;
-  margin: 5px;
-  background-color: white;
-}
-
-.decrement{
-  background-color: tomato;
-  color: white;
-  border: 1px solid red;
-  font-size: 1.3em;
-  margin-left: 5px;
-  letter-spacing: -.9px;
-}
-
-.decrement:hover{
-  border: 3px solid black;
-}
-
-.increment{
-  background-color: limegreen;
-  color: white;
-  border: 1px solid green;
-  font-size: 1.3em;
-  margin-right: 5px;
-}
-
-.increment:hover{
-  border: 3px solid black;
-}
-
-input[name=page] {
-  width: 44px;
-  padding:5px;
-  border: 1px solid steelblue;
-  border-radius: 0px 0px 4px 4px;
-  text-align: center;
-  background-color: white;
-  margin: 0px;
-}
-
-select {
-  width: 58px;
-  padding:5px;
-  border: 1px solid steelblue;
-  border-radius: 4px;
-  text-align: center;
-  background-color: white;
-  margin: 5px;
-  font-size: 1em;
-}
-
-select:hover{
-  border: 3px solid steelblue;
-}
-
-label{
-  margin: 5px;
-}
-
-.photo-container button[type=submit]{
-  display: none;
-  /* background-color: steelblue;
-  color: white;
-  font-size: 1.2em;
-  border-radius: 4px;
-  letter-spacing: 1.3px;
-  padding: 4px 16px;
-  margin-left: 4px;
-  border: 2px solid lightblue; */
-}
-
-.photo-container button[type=submit]:hover{
-  border: 3px solid lightblue;
-}
-
 @media only screen and (max-width: 767px)  {
   body {
     padding-top: 2em;
@@ -208,14 +117,9 @@ label{
     display: flex;
     justify-content: center;
   }
-
+  
   .main-nav li {
     margin: 10px;
     width: 100px;
   }
-}
-
-@keyframes rotate {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
 }
