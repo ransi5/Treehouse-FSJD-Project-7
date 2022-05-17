@@ -11,7 +11,7 @@ root.render(
 
   <Router>
     <Routes>
-      <Route path="/" element={ <Navigate replace to="/filter?search=rockies" /> } />
+      <Route path="/" element={ <Navigate replace to="/rockies?search=rockies" /> } />
       <Route path="/:filter" element={<App /> } />
       <Route path="*" element={<PageNotFound /> } />
     </Routes>

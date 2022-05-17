@@ -3,6 +3,7 @@ import { useSearchParams, useParams } from 'react-router-dom'
 import Nav from './Nav';
 import Photos from './Photo';
 import SearchForm from './SearchForm';
+import config from '../config';
 /*
 This application is built using react router v6. As such there is no support and only
 indirect means for using router in class components and allows use of state and other class
@@ -19,7 +20,7 @@ const App = (props) => {
   var filter;
   let params = useParams();
   const [ searchParams, setSearchParams ] = useSearchParams(); //1
-  
+
   if ( searchParams.get('search') ){                          //2
     filter = searchParams.get('search');
   } else {
@@ -50,7 +51,7 @@ const App = (props) => {
   let [ perpage, setPerpage ]= useState();
 
   function performSearch(query = filter, qpage = 1, qperPage = 16) {    //3
-    fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=08805f521d63ed67ed3f2b08c084449b&text=${query}&per_page=${qperPage}&content_type=1&page=${qpage}&format=json&nojsoncallback=1`)
+    fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${config.api_key}&text=${query}&per_page=${qperPage}&content_type=1&page=${qpage}&format=json&nojsoncallback=1`)
       .then( res => res.json())
       .then( data => {
         setLoading(false);
